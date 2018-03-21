@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 722173b2105c7eb4dbc3c230513792b4
+timeCreated: 1520612560
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Medici Text
+  fontNames:
+  - Medici Text
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
