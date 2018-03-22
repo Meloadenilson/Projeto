@@ -75,31 +75,39 @@ public class Personagem : MonoBehaviour {
 		if (axis < 0 && ladoDireito)
 			Vire ();
 		
-
+		if (!naParede) 
+		{
 			velocidade = new Vector2 (axis * MaxVelocidade, GetComponent<Rigidbody2D> ().velocity.y);
 			animator.SetFloat ("Velocidade", Mathf.Abs (axis));
 			GetComponent<Rigidbody2D> ().velocity = velocidade;
 			animator.SetFloat ("VelocidadeVertical", GetComponent<Rigidbody2D> ().velocity.y);
+		}
 		
 			// Para botões touch
 				
-		if (componentEsq.input == 1 && !naParede) {
+		if (componentEsq.input == 1) {
 				if (ladoDireito == true) {
 					Vire ();
 				} else {
 					ladoDireito = false;
 				}
+			if (!naParede)
+			{
 				transform.Translate (-MaxVelocidade * Time.deltaTime, 0, 0);
 				animator.SetFloat ("Velocidade", 3);
 			}
-		if (componentDir.input == 1 && !naParede) {
+			}
+		if (componentDir.input == 1) {
 				if (ladoDireito == false) {
 					Vire ();
 				} else {
 					ladoDireito = true;
 				}
+			if (!naParede) 
+			{
 				transform.Translate (MaxVelocidade * Time.deltaTime, 0, 0);
 				animator.SetFloat ("Velocidade", 3);
+			}
 			}
 			if (componentPular.input == 1 && noChao) {
 				animator.SetBool ("NoChao", false);

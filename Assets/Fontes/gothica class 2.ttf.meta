@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 722173b2105c7eb4dbc3c230513792b4
-timeCreated: 1520612560
+guid: b53e5315fd0d6534ebf8f277ed6f39ba
+timeCreated: 1521734578
 licenseType: Free
 TrueTypeFontImporter:
   serializedVersion: 4
@@ -9,9 +9,9 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: Medici Text
+  fontName: Antraxja  Goth 1938
   fontNames:
-  - Medici Text
+  - Antraxja  Goth 1938
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
