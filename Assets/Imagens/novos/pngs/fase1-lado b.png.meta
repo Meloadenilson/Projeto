@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 8e70d07f6c96f174c8c769efc4b7652e
-timeCreated: 1522025485
+timeCreated: 1522182092
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -9,6 +9,15 @@ TextureImporter:
     21300004: fase1-lado b_2
     21300006: fase1-lado b_3
     21300008: fase1-lado b_4
+    21300010: fase1-lado b_5
+    21300012: fase1-lado b_6
+    21300014: fase1-lado b_7
+    21300016: fase1-lado b_8
+    21300018: fase1-lado b_9
+    21300020: fase1-lado b_10
+    21300022: fase1-lado b_11
+    21300024: fase1-lado b_12
+    21300026: fase1-lado b_13
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -91,7 +100,7 @@ TextureImporter:
         width: 367
         height: 315
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -104,20 +113,7 @@ TextureImporter:
         width: 315
         height: 350
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: fase1-lado b_2
-      rect:
-        serializedVersion: 2
-        x: 58
-        y: 547
-        width: 373
-        height: 365
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -130,7 +126,7 @@ TextureImporter:
         width: 638
         height: 680
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -142,6 +138,123 @@ TextureImporter:
         y: 659
         width: 567
         height: 624
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fase1-lado b_2
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 576
+        width: 327
+        height: 327
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fase1-lado b_5
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 543
+        width: 329
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fase1-lado b_6
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 514
+        width: 327
+        height: 389
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fase1-lado b_7
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 480
+        width: 329
+        height: 423
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fase1-lado b_9
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 526
+        width: 338
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fase1-lado b_10
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 539
+        width: 335
+        height: 362
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fase1-lado b_11
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 511
+        width: 333
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fase1-lado b_12
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 478
+        width: 338
+        height: 428
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fase1-lado b_13
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 470
+        width: 338
+        height: 442
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
