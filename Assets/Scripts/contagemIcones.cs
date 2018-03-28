@@ -22,7 +22,7 @@ public class contagemIcones : MonoBehaviour {
 	void Update () 
 	{
 		texto.text ="Palavra: " + letrasPegas;
-		print (letrasPegas);
+
 	}
 
 	void OnCollisionEnter2D(Collision2D colisao)
