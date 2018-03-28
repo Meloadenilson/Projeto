@@ -6,6 +6,7 @@ public class Magia : MonoBehaviour {
 	public float tempoDeVida;
 	private float tempoCorrent;
 
+
 	public float velocidade;
 	// Use this for initialization
 	void Start () {
@@ -15,7 +16,9 @@ public class Magia : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
- 		transform.Translate (velocidade * Time.deltaTime, 0, 0);
+		
+			transform.Translate (velocidade * Time.deltaTime, 0, 0);
+		
 
 		tempoCorrent += Time.deltaTime;
 		if (tempoCorrent >= tempoDeVida)
@@ -24,7 +27,7 @@ public class Magia : MonoBehaviour {
 		}
 	}
 
-	public void OnTriggerEnter2D()
+	public void OnCollisionEnter2D()
 	{
 		Destroy (gameObject);
 	}

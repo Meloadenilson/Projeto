@@ -30,7 +30,7 @@ public class contagemIcones : MonoBehaviour {
 		if (colisao.gameObject.tag == "f") {
 			
 			Destroy (f);
-			letrasPegas = "F";
+			letrasPegas = letrasPegas + "F";
 
 		} else if (colisao.gameObject.tag == "r") 
 		{

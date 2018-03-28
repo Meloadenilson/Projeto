@@ -21,7 +21,7 @@ public class Personagem : MonoBehaviour {
 	 * Como o sprite do personagem criado é olhando para o lado direito, 
 	 * então o valor da variável é verdadeiro (true);
 	 */
-	bool ladoDireito = true;
+	public bool ladoDireito = true;
 	bool noChao = false; //Verifica se o personagem está em contato com o chão;
 	bool naParede = false; //Verifica se o personagem está em contato com a parede;
 
@@ -57,7 +57,7 @@ public class Personagem : MonoBehaviour {
 	// Ficamos verificando se o Heroi está em contato com o chão
 	public void FixedUpdate()
 	{
-
+		//print (ladoDireito);
 
 		/* Physics2d.OverlapCircle é a que cria o círculo imaginário ao redor do ChaoCheck 
 		 * com tamanho de chaoCheckRaio e só retorna verdadeiro quando este círculo está 

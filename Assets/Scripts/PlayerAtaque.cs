@@ -23,25 +23,29 @@ public class PlayerAtaque: MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () 
+	void Update ()
 	{
-		
-		if (Input.GetMouseButton (0) && atire == false)
-		{
-			
-			tempoCarregar += Time.deltaTime;
-			if (tempoCarregar >= tempoMaxCarregar)
-
-				atire = true;
-				tempoCarregar = 0;
+	
+			if (Input.GetMouseButton (0) && atire == false)
+			{
+				
+				tempoCarregar += Time.deltaTime;
+				if (tempoCarregar >= tempoMaxCarregar)
+				{
+					atire = true;
+					tempoCarregar = 0;
+				}
 			}
-		}
-		if (atire) 
+
+		if(atire) 
 		{
 			Disparar ();
 		}
-		
+
+	
 	}
+
+
 	public void Disparar()
 	{
 		tempoDelay += Time.deltaTime;
@@ -50,7 +54,7 @@ public class PlayerAtaque: MonoBehaviour {
 			Instantiate (magia, posicaoDisparo.position, posicaoDisparo.rotation);
 			tempoDelay = 0;
 			atire = false;
-			print ("atirou");  
+
 		}
 
 	}
