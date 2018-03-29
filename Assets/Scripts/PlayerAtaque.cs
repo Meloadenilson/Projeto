@@ -21,12 +21,12 @@ public class PlayerAtaque: MonoBehaviour {
 		
 
 	}
-	
+
 	// Update is called once per frame
 	void Update ()
 	{
 	
-			if (Input.GetMouseButton (0) && atire == false)
+		if (Personagem.ataque == true && atire == false)
 			{
 				
 				tempoCarregar += Time.deltaTime;
@@ -54,6 +54,7 @@ public class PlayerAtaque: MonoBehaviour {
 			Instantiate (magia, posicaoDisparo.position, posicaoDisparo.rotation);
 			tempoDelay = 0;
 			atire = false;
+			Personagem.ataque = false;
 
 		}
 

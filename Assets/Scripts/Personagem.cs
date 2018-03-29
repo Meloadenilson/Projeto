@@ -12,9 +12,13 @@ public class Personagem : MonoBehaviour {
 	public GameObject botaoDireita;
 	public GameObject botaoEsquerda;
 	public GameObject botaoPular;
+	public GameObject botaoAtaque;
 	Button componentDir;
 	Button componentEsq;
 	Button componentPular;
+	Button componentAtaque;
+
+	public static bool ataque = false;
 
 
 	/* Indica para que lado o personagem está olhando.
@@ -50,6 +54,7 @@ public class Personagem : MonoBehaviour {
 		componentDir = botaoDireita.GetComponent<Button> ();
 		componentEsq = botaoEsquerda.GetComponent<Button> ();
 		componentPular = botaoPular.GetComponent<Button> ();
+		componentAtaque = botaoAtaque.GetComponent<Button> ();
 
 		animator = GetComponent<Animator> ();
 	}
@@ -84,7 +89,8 @@ public class Personagem : MonoBehaviour {
 		}
 		
 			// Para botões touch
-				
+		if(componentAtaque.input == 1){ataque = true;}
+
 		if (componentEsq.input == 1) {
 				if (ladoDireito == true) {
 					Vire ();

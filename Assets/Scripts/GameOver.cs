@@ -14,7 +14,7 @@ public class GameOver : MonoBehaviour {
 	void Update () {
 		if (Input.GetMouseButtonDown (0))
 		{
-			SceneManager.LoadScene ("fase01");
+			SceneManager.LoadScene ("fase1");
 			//Application.Quit();
 
 		}
