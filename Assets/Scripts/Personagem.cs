@@ -21,7 +21,7 @@ public class Personagem : MonoBehaviour {
 	 * Como o sprite do personagem criado é olhando para o lado direito, 
 	 * então o valor da variável é verdadeiro (true);
 	 */
-	public bool ladoDireito = true;
+	public static bool ladoDireito = true;
 	bool noChao = false; //Verifica se o personagem está em contato com o chão;
 	bool naParede = false; //Verifica se o personagem está em contato com a parede;
 

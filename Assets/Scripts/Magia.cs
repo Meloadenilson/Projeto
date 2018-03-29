@@ -16,8 +16,12 @@ public class Magia : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		
+		if (Personagem.ladoDireito == true) {
 			transform.Translate (velocidade * Time.deltaTime, 0, 0);
+		}else 
+		{
+			transform.Translate (-velocidade * Time.deltaTime, 0, 0);
+		}
 		
 
 		tempoCorrent += Time.deltaTime;
