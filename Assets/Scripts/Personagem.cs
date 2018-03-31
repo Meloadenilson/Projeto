@@ -19,6 +19,7 @@ public class Personagem : MonoBehaviour {
 	Button componentAtaque;
 
 	public static bool ataque = false;
+	public static bool dano = false;
 
 
 	/* Indica para que lado o personagem está olhando.
@@ -62,6 +63,10 @@ public class Personagem : MonoBehaviour {
 	// Ficamos verificando se o Heroi está em contato com o chão
 	public void FixedUpdate()
 	{
+		if (VidaPersonagem.vidaAtual <= 0) {
+			SceneManager.LoadScene ("gameOver");
+		}
+
 		//print (ladoDireito);
 
 		/* Physics2d.OverlapCircle é a que cria o círculo imaginário ao redor do ChaoCheck 
@@ -165,7 +170,10 @@ public class Personagem : MonoBehaviour {
 		}else if (colisao.gameObject.tag == "sair") 
 		{
 			Application.Quit();
-			print ("tocou");
+
+		}else if (colisao.gameObject.tag == "dano") 
+		{
+			dano = true;
 		}
 	}
 }	

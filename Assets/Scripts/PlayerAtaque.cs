@@ -2,11 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 
 public class PlayerAtaque: MonoBehaviour {
 	public float tempoMaxCarregar;
 	public float delayDoAtaque;
+	public float maxMana;
+	private float manaAtual;
+	public float custoMagia;
+	private float suavizacao;
+	public GameObject barraMana; 
+	private Image ImagemMana;
+
 
 	public Transform posicaoDisparo;
 
@@ -18,22 +26,29 @@ public class PlayerAtaque: MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		tempoCarregar = tempoMaxCarregar;
+		manaAtual = maxMana;
+		ImagemMana = barraMana.GetComponent<Image>();
 
 	}
 
 	// Update is called once per frame
 	void Update ()
 	{
-	
+		if (tempoCarregar <= tempoMaxCarregar)
+		{
+			tempoCarregar += Time.deltaTime;
+		}
 		if (Personagem.ataque == true && atire == false)
 			{
 				
-				tempoCarregar += Time.deltaTime;
+				
 				if (tempoCarregar >= tempoMaxCarregar)
 				{
 					atire = true;
 					tempoCarregar = 0;
+					manaAtual -= custoMagia;
+
 				}
 			}
 
@@ -41,7 +56,8 @@ public class PlayerAtaque: MonoBehaviour {
 		{
 			Disparar ();
 		}
-
+		suavizacao = Mathf.SmoothStep (ImagemMana.fillAmount, manaAtual / maxMana, 10 * Time.deltaTime);
+		ImagemMana.fillAmount = suavizacao;
 	
 	}
 
@@ -49,7 +65,7 @@ public class PlayerAtaque: MonoBehaviour {
 	public void Disparar()
 	{
 		tempoDelay += Time.deltaTime;
-		if (tempoDelay >= delayDoAtaque) 
+		if (tempoDelay >= delayDoAtaque && manaAtual > 0) 
 		{
 			Instantiate (magia, posicaoDisparo.position, posicaoDisparo.rotation);
 			tempoDelay = 0;

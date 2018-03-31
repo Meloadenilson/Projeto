@@ -5,30 +5,33 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class VidaPersonagem : MonoBehaviour {
-	float vida;
-	public Text vidaTexto;
+	float vidaMaxima = 100;
+
+	private Image ImagemVida;
+	private float suavizacao;
+	public static float vidaAtual;
+
 
 	// Use this for initialization
 	void Start () {
-		vida = 100;
+		ImagemVida = GetComponent<Image>();
+		vidaAtual = vidaMaxima;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		vidaTexto.text = vida.ToString("Vida 0");
+		
+		suavizacao = Mathf.SmoothStep (ImagemVida.fillAmount, vidaAtual / vidaMaxima, 10 * Time.deltaTime);
 
-		if (vida == 0){
-			SceneManager.LoadScene ("gameOver");
+		ImagemVida.fillAmount = suavizacao;
+
+		if(Personagem.dano == true){
+			vidaAtual -= 10;
+			Personagem.dano = false;
 		}
 	}
 
 
-	void OnCollisionEnter2D(Collision2D colisao){
-			if (colisao.gameObject.tag == "dano") 
-			{
-				vida -= 10; 
-			}
-			
-		}
+
 
 }
