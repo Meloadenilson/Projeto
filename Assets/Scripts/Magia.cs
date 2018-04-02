@@ -5,12 +5,12 @@ using UnityEngine;
 public class Magia : MonoBehaviour {
 	public float tempoDeVida;
 	private float tempoCorrent;
-
-
+	public GameObject explosao;
+	public Transform posicaoExplosao;
 	public float velocidade;
 	// Use this for initialization
 	void Start () {
-
+		
 	}
 
 	// Update is called once per frame
@@ -33,9 +33,11 @@ public class Magia : MonoBehaviour {
 
 	public void OnCollisionEnter2D(Collision2D col)
 	{
-		if (col.gameObject.tag == "default") 
+		if (col.gameObject.tag == "pedra") 
 		{
 			Destroy (gameObject);
+			Instantiate (explosao,posicaoExplosao.position,posicaoExplosao.rotation);
+
 		}
 	}
 }
