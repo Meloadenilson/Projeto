@@ -9,11 +9,12 @@ public class PlayerAtaque: MonoBehaviour {
 	public float tempoMaxCarregar;
 	public float delayDoAtaque;
 	public float maxMana;
-	private float manaAtual;
+	public static float manaAtual;
 	public float custoMagia;
 	private float suavizacao;
 	public GameObject barraMana; 
 	private Image ImagemMana;
+
 
 
 	public Transform posicaoDisparo;
@@ -35,6 +36,11 @@ public class PlayerAtaque: MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
+		if (manaAtual > maxMana) {
+			manaAtual = maxMana;
+		} else if (manaAtual < 0) {
+			manaAtual = 0;
+		}
 		if (tempoCarregar <= tempoMaxCarregar)
 		{
 			tempoCarregar += Time.deltaTime;
@@ -65,14 +71,17 @@ public class PlayerAtaque: MonoBehaviour {
 	public void Disparar()
 	{
 		tempoDelay += Time.deltaTime;
-		if (tempoDelay >= delayDoAtaque && manaAtual > 0) 
-		{
+		if (tempoDelay >= delayDoAtaque && manaAtual > 0) {
 			Instantiate (magia, posicaoDisparo.position, posicaoDisparo.rotation);
 			tempoDelay = 0;
 			atire = false;
 			Personagem.ataque = false;
 
+		} else if(manaAtual <=0){
+			atire = false;
+			Personagem.ataque = false;
 		}
 
 	}
+
 }

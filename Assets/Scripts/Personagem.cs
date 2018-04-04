@@ -13,10 +13,13 @@ public class Personagem : MonoBehaviour {
 	public GameObject botaoEsquerda;
 	public GameObject botaoPular;
 	public GameObject botaoAtaque;
+	public GameObject botaoPause;
 	Button componentDir;
 	Button componentEsq;
 	Button componentPular;
 	Button componentAtaque;
+	Button componentPause;
+	private bool pause;
 
 	public static bool ataque = false;
 	public static bool dano = false;
@@ -48,16 +51,20 @@ public class Personagem : MonoBehaviour {
 	// São todas as Layers que consideramos chão. Também será atribuída através do editor.
 	public LayerMask OQueEChao;
 
+
+
 	void Start () {
 		Screen.orientation = ScreenOrientation.LandscapeLeft; //bloqueia a rotação do celular deixando o jogo sempre na horizontal.
-	
+		//yield return new WaitForSeconds (5);
 		// botões touch
 		componentDir = botaoDireita.GetComponent<Button> ();
 		componentEsq = botaoEsquerda.GetComponent<Button> ();
 		componentPular = botaoPular.GetComponent<Button> ();
 		componentAtaque = botaoAtaque.GetComponent<Button> ();
+		componentPause = botaoPause.GetComponent<Button> ();
 
 		animator = GetComponent<Animator> ();
+		pause = false;
 	}
 
 	// Ficamos verificando se o Heroi está em contato com o chão
@@ -94,6 +101,8 @@ public class Personagem : MonoBehaviour {
 		}
 		
 			// Para botões touch
+
+
 		if(componentAtaque.input == 1){ataque = true;}
 
 		if (componentEsq.input == 1) {
@@ -137,6 +146,15 @@ public class Personagem : MonoBehaviour {
 	 */
 	void Update ()
 	{
+		//Codigo para pausar o jogo =======================================================
+		if(componentPause.input != 0){pause = !pause;}
+		if(pause){
+			Time.timeScale = 0;
+		}else if(pause == false){
+			Time.timeScale = 1;
+		}print (pause);
+		//==================================================================================
+
 		if (noChao && Input.GetButton ("Jump"))
 		{
 			animator.SetBool ("NoChao", false);
